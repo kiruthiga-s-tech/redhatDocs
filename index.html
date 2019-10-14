@@ -11,75 +11,37 @@
         }
 
         body {
-            font-family: trebuchet;
-            overflow-x: hidden;
+            font-family: sans-serif;
+            overflow-x: auto;
         }
         h1 {
-        padding-bottom: 10px;
-        padding-left: 210px;
-        font-size: 1.5em;
+            font-size: 32px;
         }
 
         h2 {
-        padding-left: 210px;
-        font-size: 1.25em;
+            font-size: 26px;
+            padding-left: 30px;
+            padding-bottom: 5px;
         }
 
         p {
-        padding-left: 210px;
-        font-size: 1em;
-        font-family: trebuchet;
-        text-align: justify-all;
+            font-size: 16px;
+            text-align: justify-all;
+            padding-left: 30px;
+            line-break:loose;
         }
         ol {
-        list-style: decimal;
-        padding: 10px 5px;
-        padding-left: 210px;
-        margin-left: 35px;
-        }
-        nav {
-            position: fixed;
-            display: block;
-            z-index: 1000;
-            top: 0;
-            bottom: 0;
-            width: 200px;
-            background-color: #34495E;
-        }
-        .active-nav nav {
-            transform: none;
-        }
-        nav ul {
-            list-style: none;
-            margin-top: 100px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            color: #fff;
+            list-style: decimal;
             padding: 10px 5px;
-            font-size: 1.25em;
+            margin-left: 35px;
+            padding-left: 35px;
         }
-
-        .nav-toggle-btn {
-            display: block;
-            position: absolute;
-            left: 200px;
-            width: 40px;
-            height: 40px;
-            background-color: #666;
-        }
-
         .content {
             padding-top: 50px;
-            height: 2000px;
+            height: 800px;
             background-color: #ABB2B9;
-            text-align: justify-all;
+            text-align: justify;
             transition: transform 0.4s ease;
-        }
-        .active-nav .content {
-            transform: translate3d(200px, 0, 0);
         }
         .navbar-text{
             text-decoration: none;
@@ -95,35 +57,33 @@
     </head>
     <body>
         <div class="row">
-            <span class="navbar-text"><header>How to use Google Pay? </header></span>
+            <span class="navbar-text"><h1 style="text-align: left;padding-left: 25px">How to use Google Pay? </h1></span>
         </div>
-
-        <nav>
-           <!--<a href="#" class="nav-toggle-btn"></a>-->
-            <ul>
-                <li><a href="#introduction" onclick="showSection('introduction');return false;">Introduction</a></li>
-                <li><a href="#prerequisites" onclick="showSection('prerequisites');return false;">Prerequisites</a></li>
-                <li><a href="#request money" onclick="showSection('request money');return false;">Request money</a></li>
-                <li><a href="#send money" onclick="showSection('send money');return false;">Send money</a></li>
-            </ul>
-            
-        </nav>
-        
-        
-        <div class="content">
-    <section class="main-section"  id="introduction" style="display: block;">
-      <h1>Introduction</h1>
-        <p>Google Pay is a digital wallet and an online payment system developed by Google to power in-app and tap-to-pay purchases on mobile devices. This app enables you to send or receive money using Android phones, tablets, or watches to friends and family.
+ 
+    <div class="content">
+    <section class="main-section"  id="introduction">
+      <h2>Introduction</h2>
+        <p>Google Pay is a digital wallet and an online payment system developed by Google to power in-app and tap-to-pay purchases on mobile devices.<br>This app enables you to send or receive money using Android phones, tablets, or watches to friends and family.
         </p><br>
       </section>
-      <section class="main-section" id="prerequisites" style="display: none">
-      <h1>Prerequisites</h1>
-        <p>You will need an internet connection, a bank account, and a phone number.
+      <section class="main-section" id="prerequisites" style="padding-top: 10px">
+      <h2>Prerequisites</h2>
+        <p>You will need an internet connection, a google account,bank account, and a phone number.
         </p><br>
       </section>
-      <section class="main-section" id="request money" style="display: none">
-      <h1>Request Money</h1>
-        <p><ol>
+      <section class="main-section" id="setup" style="padding-top: 10px">
+      <h2>Set up Google Pay</h2>
+        <p>To set up Google Pay app on your device, follow the steps:<ol>
+            <li> Download the <b> Google Pay app</b> from the Google Play Store or the App Store.</li>
+            <li> Enter the <b>Phone number.</b></li>
+            <li> Sign into your google account and add a payment method.</li>
+            </ol>
+            <br>
+      </section>
+      <section class="main-section" id="receivemoney" style="padding-top: 10px">
+      <h2>Request Money</h2>
+      <article>
+        <p>To request money using Google Pay, follow the steps:<ol>
             <li> Open <b> Google Pay</b>.</li>
             <li> Select the <b>contact to initiate the payment request.</b></li>
             <li> Enter the amount and description. </li>
@@ -131,30 +91,25 @@
             </ol>
             <p><b>Note:</b> You will receive notification when the request is accepted or declined.
         </p><br>
-      </section>
-      <section class="main-section" id="send money" style="display: none">
-      <h1>Send Money</h1>
-      <article>
-        <p><ol>
+        </article>
+    </section>
+    <section class="main-section" id="sendmoney" style="padding-top: 10px">
+        <h2>Send Money</h2>
+        <p>To send money using Google Pay, follow the steps:<ol>
             <li> Open <b> Google Pay.</b></li>
             <li> Naviagate to Payments, select the person's name, phone number, account number, or UPI ID.</li>
             <li> Tap <b>Pay.</b></li>
             <li> Enter the transaction amount and description.</li>
             <li> Tap <b> Proceed to pay</b>.</li>
-            <li> Enter <b> UPI PIN </b></li>.
+            <li> Enter <b> UPI PIN. </b></li>
         </ol>
         <p><b>Note:</b> Ensure to enter the correct details. Once the transaction is complete, it cannot be reversed.</p></li>
-        </p><br>
+        </p><br><br>
       </article>
       </section>
         </div>
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script type="text/javascript">
-function showSection(id) {
-   var e = document.getElementById(id);
- if(e.style.display == 'none')
-          e.style.display = 'block';
-}
-</script>
+    <footer>
+        <p style="text-align: center; padding-top: 5px;padding-bottom: 5px">&copy; 2019 All Rights Reserved</p>
+    </footer>
 </body>
 </html>
